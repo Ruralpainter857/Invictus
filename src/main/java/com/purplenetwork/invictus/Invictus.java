@@ -1,5 +1,6 @@
 package com.purplenetwork.invictus;
 
+import com.purplenetwork.invictus.block.ModBlocks;
 import com.purplenetwork.invictus.item.ModItems;
 import org.slf4j.Logger;
 
@@ -50,6 +51,7 @@ public class Invictus {
         // ---------------------------< WHATEVER NEEDS TO BE REGISTERED PART >------------------------------
         modEventBus.addListener(this::addCreative);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
